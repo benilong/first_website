@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="HTML, CSS" />
+    <meta
+      name="description"
+      content="FOR USE OF URBANA TANNING EMPLOYEES ONLY"
+    />
+
+    <title>Urbana Sales Leaderboard</title>
+    <style>
+      html {
+        background-color: #5aa4ff88;
+      }
+      .body{
+        text-align: center;
+      }
+      .logo{
+        width: 400px;
+        margin-right: 30px;
+        position: relative;
+        left: 28px;
+      }
+      .slogan {
+        font-weight: 900;
+        font: message-box;
+        font-size: 30px;
+        position: absolute;
+        left: 60px;
+        top: 450px;
+      }
+      .slogan2 {
+        font-weight: 900;
+        font: message-box;
+        font-size: 30px;
+        position: absolute;
+        left: 90px;
+        top: 480px;
+      }
+      .rand {
+        color: blue;
+        font-weight: bolder;
+        font: message-box;
+        font-size: large;
+      }
+      .currentNameBar {
+        width: 250px;
+        border-radius: 9px;
+        padding: 5px;
+        position: absolute;
+        top: 200px;
+        left: 55px;
+      }
+      .currentAmountBar {
+        width: 250px;
+        padding: 5px;
+        border-radius: 9px;
+        position: absolute;
+        top: 270px;
+        left: 55px;
+      }
+      .currentAmount {
+        font-weight: bold;
+        font-size: 20px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        position: absolute;
+        top: 240px;
+        left: 55px;
+      }
+      .currentName {
+        font-weight: bold;
+        font-size: 20px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        position: absolute;
+        top: 170px;
+        left: 55px;
+      }
+
+      .enter {
+        background: linear-gradient(to bottom right, #466f08, #41d377);
+        border: 0;
+        border-radius: 12px;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 2.5;
+        outline: transparent;
+        padding: 0 6rem;
+        text-align: center;
+        transition: box-shadow 0.2s ease-in-out;
+        touch-action: manipulation;
+        white-space: nowrap;
+
+        position: absolute;
+        top: 330px;
+        left: 55px;
+      }
+      .enter:hover {
+        box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+          -0.125rem -0.125rem 1rem rgba(113, 239, 71, 0.7),
+          0.125rem 0.125rem 1rem rgba(90, 255, 126, 0.7);
+      }
+      .remove {
+        background: linear-gradient(to bottom right, #ef4765, #ff9a5a);
+        border: 0;
+        border-radius: 12px;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 2.5;
+        outline: transparent;
+        padding: 0 5.3rem;
+        text-align: center;
+        transition: box-shadow 0.2s ease-in-out;
+        touch-action: manipulation;
+        white-space: nowrap;
+
+        position: absolute;
+        top: 390px;
+        left: 55px;
+      }
+      .remove:hover {
+        box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+          -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.7),
+          0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.7);
+      }
+      .leaderboardbox {
+        position: absolute;
+        top: 170px;
+        left: 500px;
+        width: 325px;
+        height: 450px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: #0b5a729f;
+        border-color: #41d377;
+        border-width: 100px;
+        font-size: 30px;
+        font-family: copperplate;
+      }
+      .leaderboardbox2 {
+        position: absolute;
+        top: 170px;
+        left: 870px;
+        width: 325px;
+        height: 450px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: #0b5a729f;
+        border-color: #41d377;
+        border-width: 100px;
+        font-size: 30px;
+        font-family: copperplate;
+      }
+      .leaderboardname2_2{
+        position: absolute;
+        left: 890px;
+        top: 130px;
+        font-size: 45px;
+        font-family: copperplate;
+      }
+      .leaderboardname_2{
+        position: absolute;
+        left: 880px;
+        top: 160px;
+        font-size: 45px;
+        font-family: copperplate;
+
+      }
+      .leaderboardname {
+        position: absolute;
+        left: 518px;
+        top: 160px;
+        font-size: 45px;
+        font-family: copperplate;
+      }
+      .leaderboardname2 {
+        position: absolute;
+        left: 580px;
+        top: 130px;
+        font-size: 45px;
+        font-family: copperplate;
+      }
+      .profile {
+        position: absolute;
+        top: 500px;
+        left: 65px;
+        width: 600px;
+      }
+      .chat {
+        width: 300px;
+        position: absolute;
+        top: 450px;
+        left: 20px;
+      }
+      .center {
+        
+        display: flex;
+        flex-direction: column; /* Arrange children in a column */
+        align-items: center; /* Center items horizontally */
+        
+        background-color: #4180d3b8;
+        border-radius: 25px;
+        height: 1000px;
+        position: relative;
+        max-width: 65%; /* Maximum width of the container */
+        margin: auto;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Preserve text formatting */
+
+
+          
+      }
+      
+      .sale-type{
+          font-size: 20px;
+          font-family: Georgia, "Times New Roman", Times, serif;
+          font-weight: bold;
+          position: absolute;
+          top: 240px;
+          left: 55px;
+      }
+      .dropdown{
+        position: absolute;
+        top: 270px;
+        left: 55px;
+        width: 200px;
+        height: 35px;
+        font-size: 18px;
+        
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="center">
+
+      <img class="logo" src="images/urbana-tanning-md-logo.png" alt="File Not found" />
+      <img class="profile" src="images/jeff_picture.png" alt="File Not found" />
+      <img class="chat" src="images/chat_bubble.png" alt="File Not found" />
+      <p class="slogan">Climb Your Way</p>
+      <p class="slogan2">to The Top!</p>
+
+      <label class="currentName" for="name">Name:</label>
+      
+      <input
+        class="currentNameBar"
+        id="currentNameBarID"
+        type="text"
+        id="name"
+        name=""
+      />
+
+      <label class="sale-type" for="dog-names">Choose Type of Sale:</label>
+        <select class="dropdown" name="dog-names" id="dog-names">
+            <option value="ETF">EFT - 12 points</option>
+            <option value="LL">Large Lotion - 5 points</option>
+            <option value="SML">Small Lotion - 3 points</option>
+            <option value="MISC">Misc - 1 points</option>
+        </select>
+
+      <input class="enter" id="enterID" type="button" value="Enter Sale" />
+
+      <input class="remove" id="removeID" type="button" value="Remove Sale" />
+      
+      <label class="leaderboardname2" for="leaderboardbox">Points</label>
+      <label class="leaderboardname" for="leaderboardbox">Leaderboard</label>
+      
+      <label class="leaderboardname2_2" for="leaderboardbox">Total Sales</label>
+      <label class="leaderboardname_2" for="leaderboardbox">Leaderboard</label>
+      
+      <p class="leaderboardbox" id="leaderboardboxID" type="text" name=""></p>
+      <p class="leaderboardbox2" id="leaderboardboxID" type="text" name=""></p>
+    </div>
+ 
+    <script src="index2.js"></script>
+  </body>
+</html>
